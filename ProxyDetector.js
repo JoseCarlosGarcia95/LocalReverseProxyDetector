@@ -52,6 +52,6 @@
             callback(false);
         }
       } catch (e) {
-        callback(true);
+        callback(false);
       }
   }
