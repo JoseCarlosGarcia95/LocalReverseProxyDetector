@@ -11,10 +11,17 @@
 
       /* time trickery will be used for checing if proxy is running */
       var t1 = Date.now();
+      
 
       /* initiliaze ajax object */
-      var req = (window.XMLHttpRequest) ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP");
-
+      var req;
+      if (window.XMLHttpRequest) {
+        // code for IE7+, Firefox, Chrome, Opera, Safari
+        req = new XMLHttpRequest();
+      } else {
+        // code for IE6, IE5
+        req = new ActiveXObject("Microsoft.XMLHTTP");
+      }
       /* old browser? */
       if (req == null) {
            console.error("Ajax initialize error.");
