@@ -11,7 +11,6 @@
 
       /* time trickery will be used for checing if proxy is running */
       var t1 = Date.now();
-      var t2;
 
       /* initiliaze ajax object */
       var req = (window.XMLHttpRequest) ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP");
